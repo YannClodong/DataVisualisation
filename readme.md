@@ -1,5 +1,7 @@
 # Data visualisation
+
 Go to visualisation : https://yannclodong.github.io/DataVisualisation/visualisation/
+
 Le but de ce projet est de visualiser la popularité des genre entre les pays.
 Mon partenaire, lui, prend en compte les années. Le traitement de données prendra donc ces 2 aspects en compte.
 
