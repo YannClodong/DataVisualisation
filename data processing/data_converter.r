@@ -1,6 +1,6 @@
 library(tidyverse)
 
-albums <- read_rds("./Wasabi/albums_all_artists_3000.rds")
+albums <- read_rds("./data processing/Wasabi/albums_all_artists_3000.rds")
 albums <- albums %>%
     select(genre, publicationDate, country) %>%
     mutate(date = publicationDate) %>%
@@ -12,7 +12,7 @@ albums$country_code <- albums$country_code %>% replace_na("Inconu") %>% replace(
 albums$genre <- albums$genre %>% replace_na("Inconu") %>% replace(.=="", "Inconu")
 
 
-countries <- read.csv2("./Wasabi/world.csv") %>%
+countries <- read.csv2("./data processing/Wasabi/world.csv") %>%
     select(FrenchName, ISO3166_1Alpha2Codes, RegionOfTheTerritory, ContinentOfTheTerritory) %>%
     mutate(country_code = ISO3166_1Alpha2Codes) %>%
     mutate(country_name = FrenchName) %>%
