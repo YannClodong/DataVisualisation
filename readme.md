@@ -70,6 +70,8 @@ Pour les pays, les pays seront regroupé par region puis par continent, par exem
 Lorsque l'on cliquera sur les label des axes, nous naviguerons dans l'arborescence.
 ![Navigate in heatmap](screenshots/navigated.png)
 
+Etant données la taille de certaines valeurs dans la heatmap, nous avons fait le choix d'afficher les couleurs dans une échelle logarithmique en base 10 qui nous permet d'avoir une meilleur répartition des couleurs.
+
 ## Traitement des données
 ### Données importantes
 Les données utililes sont donc :
