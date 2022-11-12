@@ -32,8 +32,8 @@ function initHeatmap() {
 
         return {
             top: 10,
-            left: 100,
-            width: c.offsetWidth - 110 - ((selectedLocation?.length ?? 0) === 3 ? panelWidth : 0),
+            left: 200,
+            width: c.offsetWidth - 210 - ((selectedLocation?.length ?? 0) === 3 ? panelWidth : 0),
             height: c.offsetHeight - 50
         }
     }
