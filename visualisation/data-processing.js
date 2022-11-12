@@ -26,9 +26,10 @@ async function loadData() {
 }
 
 var shortenCountry = function (name) {
+    name = name.replaceAll("ï¿½", "e");
     if (name === "Royaume-Uni de Grande-Bretagne et d'Irlande du Nord") return "UK";
     if (name === "F�d�ration de Russie") return "Russie"
-    if (name === "R�publique tch�que") return "R. tchèque"
+    if (name === "Republique tcheque") return "R. tchèque"
     if (name === "�tats-Unis d'Am�rique") return "USA"
     if (name === "Norv�ge") return "Norvège"
     if (name === "Su�de") return "Suède"
@@ -36,6 +37,7 @@ var shortenCountry = function (name) {
 }
 
 function getGenrePath(genre) {
+    genre = genre.replaceAll("&amp;", "&").replaceAll("&apos;", "'").replaceAll("&#xE4;", "ä").replaceAll("&#xE9;", "é").replaceAll("&#xF6;", "ö").replaceAll("&#xFC;", "ü").replaceAll("&#xF3;", "ó");
     if (genre.match(/.*[rR]ock.*/)) return ["Rock", genre]
     if (genre.match(/.*[mM]etal.*/)) return ["Metal", genre]
     if (genre.match(/.*[cC]ountry.*/)) return ["Country", genre]
@@ -46,7 +48,7 @@ function getGenrePath(genre) {
     if (genre.match(/.*[pP]unk.*/)) return ["Punk", genre]
     if (genre.match(/[fF][oi]lk.*/)) return ["Folk", genre]
     if (genre.match(/.*[jJ]azz.*/)) return ["Jazz", genre]
-    if (genre.match(/.*R&amp;B.*/)) return ["R&B", genre]
+    if (genre.match(/.*R&B.*/)) return ["R&B", genre]
     if (genre.match(/.*Visual Kei.*/)) return ["Visual Kei", genre]
     if (["Protest Song", "Christmas", "Christian", "Religious"].includes(genre)) return ["Religious", genre]
     return ["Other", genre];
