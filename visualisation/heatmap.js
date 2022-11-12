@@ -241,6 +241,7 @@ function initHeatmap() {
             .style("flex-direction", "column")
             .style("padding", "10px")
             .style("background-color", "white")
+            .style("border-left", "black 1px solid")
 
         panel.append("h1")
             .text(selectedLocation[selectedLocation.length - 1])
