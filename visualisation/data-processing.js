@@ -49,7 +49,7 @@ function getGenrePath(genre) {
     if (genre.match(/[fF][oi]lk.*/)) return ["Folk", genre]
     if (genre.match(/.*[jJ]azz.*/)) return ["Jazz", genre]
     if (genre.match(/.*R&B.*/)) return ["R&B", genre]
-    if (genre.match(/.*Visual Kei.*/)) return ["Visual Kei", genre]
+    if (genre.match(/.*Rap*/)) return ["Rap", genre]
     if (["Protest Song", "Christmas", "Christian", "Religious"].includes(genre)) return ["Religious", genre]
     return ["Other", genre];
 }
