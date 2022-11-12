@@ -5,6 +5,8 @@ albums <- albums %>%
     select(genre, publicationDate, country) %>%
     mutate(date = publicationDate) %>%
     mutate(country_code = country) %>%
+    mutate(genre = str_replace_all(genre, "&#x200E;", "")) %>%
+    mutate(genre = str_replace_all(genre, "&#x200F;", "")) %>%
     select(genre, country_code, date)
 
 albums$date <- albums$date %>% replace_na("Inconnu")
