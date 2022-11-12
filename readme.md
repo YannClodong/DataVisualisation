@@ -65,7 +65,7 @@ Dans le panel affichant les proportions de chaque genre, nous proposerons une ca
 Le dataset contient un important nombre de genre comme de pays, ceci bien que finis, auront du mal à être affiché correctement. Pour cela, nous allons utiliser une vue __arborescente__ des axes. 
 
 En effet, pour les genre, les genres seront regroupé par famille, par exemple "Alternative Rock" est un "Rock".<br>
-Un groupe "Autre" regroupera tous les genres non classables dans la liste [Rock, Metal, Country, Hip Hop, Pop, Wave, Electro, Punk, Folk, Jazz, R&B, Visual Kei, Religieux]<br>
+Un groupe "Autre" regroupera tous les genres non classables dans la liste [Rock, Metal, Country, Hip Hop, Pop, Wave, Electro, Punk, Folk, Jazz, R&B, Rap, Religieux]<br>
 Cette rubrique étant très grande, le choix à été fait de masqué le nom des genres temps que l'on ne survole pas le label.<br>
 Pour les pays, les pays seront regroupé par region puis par continent, par exemple "France" est en "Europe de l'Ouest" qui est en "Europe".<br>
 
