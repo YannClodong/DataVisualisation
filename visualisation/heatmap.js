@@ -85,6 +85,8 @@ function initHeatmap() {
         .domain(drawingData.map(d => d.locationLabel))
         .padding(0.05);
 
+    const xPadding = x.bandwidth() * x.padding() + 2;
+
     const xTitles = svg.append("g")
         .style("font-size", 15)
         .attr("transform", "translate(" + chartArea().left + "," + (chartArea().top + chartArea().height) + ")")
@@ -118,11 +120,12 @@ function initHeatmap() {
                 selectedLocation = path
             initHeatmap()
         });
+    
 
     xTitles.selectAll(".tick")
         .insert("rect", "line + *")
-        .attr("width", () => x.bandwidth())
-        .attr("transform", `translate(-${x.bandwidth() / 2}, 0)`)
+        .attr("width", () => x.bandwidth() + xPadding)
+        .attr("transform", `translate(-${x.bandwidth() / 2 + xPadding / 2}, 0)`)
         .attr("y", () => -chartArea().height - chartArea().top)
         .attr("height", () => height())
         .attr("fill", d => selectedLocation.length > 0 && pathsLocation[d].startWith(selectedLocation) ? selectedColor : "transparent")
@@ -134,6 +137,9 @@ function initHeatmap() {
         .range([chartHeight, 0])
         .domain(drawingData.sort((g1, g2) => comparePath(g1.genre, g2.genre)).map((d) => d.genreLabel))
         .padding(0.05);
+
+    const yPadding = y.bandwidth() * y.padding() + 1;
+
     const yTitles = svg.append("g")
         .style("font-size", 15)
         .attr("transform", `translate(${chartArea().left}, ${chartArea().top})`)
@@ -149,8 +155,8 @@ function initHeatmap() {
     yTitles.selectAll(".tick")
         .insert("rect", "line + *")
         .attr("width", () => width())
-        .attr("height", () => y.bandwidth())
-        .attr("transform", `translate(0, -${y.bandwidth() / 2})`)
+        .attr("height", () => y.bandwidth() + yPadding)
+        .attr("transform", `translate(0, -${y.bandwidth() / 2 + yPadding / 2})`)
         .attr("x", () => -chartArea().left)
         .style("fill", d => selectedGenre.length > 0 && pathsGenre[d].startWith(selectedGenre) ? selectedColor : "transparent")
 
