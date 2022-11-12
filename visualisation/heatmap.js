@@ -217,6 +217,8 @@ function initHeatmap() {
         .append("rect")
         .attr("x", d => chartArea().left + x(d.locationLabel))
         .attr("y", d => chartArea().top + y(d.genreLabel))
+        .attr("rx", 5)
+        .attr("ry", 5)
         .attr("fill", d => myColor(Math.log10(d.count)))
         .attr("width", () => x.bandwidth())
         .attr("height", () => y.bandwidth())
