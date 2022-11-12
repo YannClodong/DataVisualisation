@@ -59,6 +59,7 @@ Pour rendre les données plus compréhensible, nous allons les affiché de la ma
 ![Tooltip heatmap](screenshots/tooltip-heatmap.png)
 - Dans le diagramme circulaire, nous affichons la proportion de chaque genre ainsi que le genre survolé.
 ![Tooltip heatmap](screenshots/tooltip-piechart.png)
+Dans le panel affichant les proportions de chaque genre, nous proposerons une case à cocher pour afficher les genre "Inconnu" qui sera décoché par défaut.
 
 ### Gestion de l'importance du Dataset
 Le dataset contient un important nombre de genre comme de pays, ceci bien que finis, auront du mal à être affiché correctement. Pour cela, nous allons utiliser une vue __arborescente__ des axes. 
