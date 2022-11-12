@@ -7,9 +7,9 @@ albums <- albums %>%
     mutate(country_code = country) %>%
     select(genre, country_code, date)
 
-albums$date <- albums$date %>% replace_na("Inconu")
-albums$country_code <- albums$country_code %>% replace_na("Inconu") %>% replace(.=="NULL", "Inconu") %>% replace(.=="", "Inconnu")
-albums$genre <- albums$genre %>% replace_na("Inconu") %>% replace(.=="", "Inconu")
+albums$date <- albums$date %>% replace_na("Inconnu")
+albums$country_code <- albums$country_code %>% replace_na("Inconnu") %>% replace(.=="NULL", "Inconnu") %>% replace(.=="", "Inconnu")
+albums$genre <- albums$genre %>% replace_na("Inconnu") %>% replace(.=="", "Inconnu")
 
 
 countries <- read.csv2("./data processing/Wasabi/world.csv") %>%
