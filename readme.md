@@ -69,7 +69,7 @@ Un groupe "Autre" regroupera tous les genres non classables dans la liste [Rock,
 Cette rubrique étant très grande, le choix à été fait de masqué le nom des genres temps que l'on ne survole pas le label.<br>
 Pour les pays, les pays seront regroupé par region puis par continent, par exemple "France" est en "Europe de l'Ouest" qui est en "Europe".<br>
 
-Lorsque l'on cliquera sur les label des axes, nous naviguerons dans l'arborescence.
+Lorsque l'on cliquera sur les label des axes, nous naviguerons dans l'arborescence (Focus+Context).
 ![Navigate in heatmap](screenshots/navigated.png)
 
 Etant données la taille de certaines valeurs dans la heatmap, nous avons fait le choix d'afficher les couleurs dans une échelle logarithmique en base 10 qui nous permet d'avoir une meilleur répartition des couleurs.
